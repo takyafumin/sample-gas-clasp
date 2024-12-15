@@ -4,7 +4,7 @@
     "module": "es2020",
     "lib": ["es2020"],
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "dist/src",
     "rootDir": ".",
     "strict": true,
     "esModuleInterop": true,

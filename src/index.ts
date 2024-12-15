@@ -29,6 +29,7 @@
  * limitations under the License.
  */
 
-import { hello } from './example-module';
-
-console.log(hello());
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function doGet(): GoogleAppsScript.HTML.HtmlOutput {
+  return HtmlService.createHtmlOutputFromFile('resources/html/index.html');
+}

@@ -32,12 +32,13 @@ import cleanup from 'rollup-plugin-cleanup';
 import license from 'rollup-plugin-license';
 import prettier from 'rollup-plugin-prettier';
 import typescript from 'rollup-plugin-typescript2';
+import copy from 'rollup-plugin-copy';
 import { fileURLToPath } from 'url';
 
 export default {
   input: 'src/index.ts',
   output: {
-    dir: 'dist',
+    dir: 'dist/src',
     format: 'esm',
   },
   plugins: [
@@ -51,6 +52,11 @@ export default {
     }),
     typescript(),
     prettier({ parser: 'typescript' }),
+    copy({
+      targets: [
+        { src: 'resources/html/index.html', dest: 'dist/resources/html' },
+      ],
+    }),
   ],
   context: 'this',
 };
