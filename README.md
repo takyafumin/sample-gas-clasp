@@ -1,19 +1,5 @@
-<!--
-Copyright 2023 takyafumin@gmail.com
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 # sample-gas-clasp
+
 GAS を ローカルで開発してみる
 
 ## 環境
@@ -41,3 +27,42 @@ npx aside init
 ✔ Script ID (optional): …
 ✔ Script ID for production environment (optional): …
 ```
+
+## 使い方
+
+### ビルド
+
+```bash
+# プロジェクトをビルドする
+npm run build
+```
+
+### デプロイ
+
+```bash
+# lint, test も実行される
+npm run deploy
+```
+
+
+### GASデプロイの手順
+
+#### 初回
+
+- コマンドラインでGASファイルを開く
+  ```bash
+  clasp open
+  ```
+- デプロイ＞新しいデプロイ
+- 「ウェブアプリ」を選択してデプロイ
+
+#### 2回目以降
+
+- コマンドラインでGASファイルを開く
+  ```bash
+  clasp open
+  ```
+- デプロイ＞デプロイを管理
+- デプロイ済みの定義を編集
+  - バージョンは「新バージョン」を選択
+  - 説明は任意
