@@ -29,7 +29,14 @@
  * limitations under the License.
  */
 
+const filePath = 'resources/html/index.html';
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function doGet(): GoogleAppsScript.HTML.HtmlOutput {
-  return HtmlService.createHtmlOutputFromFile('resources/html/index.html');
+  try {
+    return HtmlService.createHtmlOutputFromFile(filePath);
+  } catch (e) {
+    const errorMessage = `Error: ${(e as Error).message}`;
+    return HtmlService.createHtmlOutput(`<p>${errorMessage}</p>`);
+  }
 }
